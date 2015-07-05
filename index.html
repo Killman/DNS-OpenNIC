@@ -7,6 +7,7 @@
             body{background:#efedeb; font-size:15px; font-family:'Monospace';}
             pre{background:#efedeb;}
         </style >
+        
     </head>
     <body class='colore'>
         <div ='dns'>
@@ -25,7 +26,15 @@
         IP:</b> 186.3.17.230 <br/>
         </div>
         
-        
+        <script type="application/javascript">
+          $(function() {
+            $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
+              function(json) {
+                document.write("My public IP address is: ", json.ip);
+              }
+            );
+          });
+        </script>
         
     </body>
 </html>
